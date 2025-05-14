@@ -1,0 +1,286 @@
+{
+  "Information": {
+    "Name": "GeoDash",
+    "Description": "A playable GeoDash game",
+    "Author": "Christian Bepler",
+    "Resolution": {
+      "Width": 1280,
+      "Height": 720
+    }
+  },
+  "Data": {
+    "Scene": [
+      {
+        "Name": "MainGame",
+        "StoreObjects": [
+          {
+            "Name": "Ship",
+            "Tag": "player",
+            "Components": [
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "JumpWhenPressed",
+                      "actions": [
+                        {
+                          "name": "VelocityYSetAction",
+                          "parameter": -500.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "KeyPressConstraint",
+                          "parameter": "SPACE"
+                        },
+                        {
+                          "name": "TouchingFromAboveConstraint",
+                          "parameter": "Ground"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/Ship.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0
+                }
+              },
+              {
+                "Name": "PhysicsHandler",
+                "Configurations": {
+                  "mass": 1.0,
+                  "velocityX": 150.0,
+                  "velocityY": 0.0,
+                  "accelerationX": 0.0,
+                  "accelerationY": 980.0
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 100.0,
+                  "y": 420.0,
+                  "zIndex": 2,
+                  "rotation": 0.0,
+                  "scaleX": 40.0,
+                  "scaleY": 40.0
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Ground",
+                    "Obstacle"
+                  ],
+                  "isPermeable": false
+                }
+              }
+            ]
+          }
+        ],
+        "GameObjects": [
+          {
+            "Name": "Ground",
+            "Tag": "Ground",
+            "Components": [
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/block.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": 600.0,
+                  "zIndex": 1,
+                  "rotation": 0.0,
+                  "scaleX": 2560.0,
+                  "scaleY": 20.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Ground",
+                    "Obstacle"
+                  ],
+                  "isPermeable": false
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Player",
+            "Tag": "player",
+            "Components": [
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "JumpWhenPressed",
+                      "actions": [
+                        {
+                          "name": "VelocityYSetAction",
+                          "parameter": -500.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "KeyPressConstraint",
+                          "parameter": "SPACE"
+                        },
+                        {
+                          "name": "TouchingFromAboveConstraint",
+                          "parameter": "Ground"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "SwitchToPlane",
+                      "actions": [
+                        {
+                          "name": "SwapAction",
+                          "parameter": "Ship"
+                        },
+                        {
+                          "name": "SetCameraFocusAction",
+                          "parameter": "Ship"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "KeyPressConstraint",
+                          "parameter": "U"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/player.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0
+                }
+              },
+              {
+                "Name": "PhysicsHandler",
+                "Configurations": {
+                  "mass": 1.0,
+                  "velocityX": 150.0,
+                  "velocityY": 0.0,
+                  "accelerationX": 0.0,
+                  "accelerationY": 980.0
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 100.0,
+                  "y": 420.0,
+                  "zIndex": 2,
+                  "rotation": 0.0,
+                  "scaleX": 40.0,
+                  "scaleY": 40.0
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Ground",
+                    "Obstacle"
+                  ],
+                  "isPermeable": false
+                }
+              }
+            ]
+          },
+          {
+            "Name": "BackGround",
+            "Tag": "BackGround",
+            "Components": [
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/background.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 5000.0,
+                  "scaleY": 2000.0
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Camera",
+            "Tag": "Camera",
+            "Components": [
+              {
+                "Name": "Camera",
+                "Configurations": {
+                  "isMainCamera": true
+                }
+              },
+              {
+                "Name": "Follower",
+                "Configurations": {
+                  "followObjectName": "Player",
+                  "smoothMovement": true
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 1300.0,
+                  "scaleY": 1000.0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "PrefabScene",
+        "StoreObjects": [],
+        "GameObjects": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "Information": {
+    "Name": "GAME_DATA_TEST"
+  },
+  "Data": {
+    "Resolutions": {
+      "Width": 800,
+      "Height": 600
+    },
+    "Resources": [
+      {
+        "Name": "TestSprite",
+        "Path": "Resources/TestSprite.png"
+      }
+    ],
+    "Scene": [
+      {
+        "Name": "Test Scene",
+        "GameObjects": [
+          {
+            "Name": "Test Object",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "position": {
+                    "X": 0,
+                    "Y": 0
+                  },
+                  "rotation": {
+                    "X": 0,
+                    "Y": 0
+                  },
+                  "scale": {
+                    "X": 1,
+                    "Y": 1
+                  }
+                }
+              }
+            ],
+            "Behaviours": [
+              {
+                "Name": "TestBehaviour",
+                "Configurations": {}
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

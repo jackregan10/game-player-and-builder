@@ -1,0 +1,1421 @@
+{
+  "Information": {
+    "Name": "DinoRunner1",
+    "Description": "A playable dino runner game",
+    "Author": "Christian Bepler",
+    "Resolution": {
+      "Width": 1280,
+      "Height": 720
+    }
+  },
+  "Data": {
+    "Scene": [
+      {
+        "Name": "MainGame",
+        "StoreObjects": [],
+        "GameObjects": [
+          {
+            "Name": "Platform (prefab) (clone) 1",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 637.7747497558594,
+                  "y": 349.4732971191406,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 253.57867431640625,
+                  "scaleY": 41.162261962890625
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "RightBound",
+            "Tag": "RightBound",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 1181.673511505127,
+                  "y": -535.1651725769043,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 100.0,
+                  "scaleY": 886.5850524902344
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Enemy"
+                  ],
+                  "isPermeable": false
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Platform (prefab) (clone) 3",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 769.0236206054688,
+                  "y": 29.469383239746094,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 200.0,
+                  "scaleY": 33.959869384765625
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Platform (prefab) (clone) 5",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 915.5385131835938,
+                  "y": 100.74694061279297,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 200.0,
+                  "scaleY": 30.0
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Platform (prefab) (clone) 0",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 261.802490234375,
+                  "y": 340.6589050292969,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 200.0,
+                  "scaleY": 30.0
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Devil",
+            "Tag": "Enemy",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 661.331184387207,
+                  "y": -179.17840957641602,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 100.0,
+                  "scaleY": 100.0
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/Devil_2.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "PhysicsHandler",
+                "Configurations": {
+                  "mass": 1.0,
+                  "velocityX": 100.0,
+                  "velocityY": 0.0,
+                  "accelerationX": 0.0,
+                  "accelerationY": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "RightBound",
+                    "LeftBound",
+                    "Player",
+                    "Bullet"
+                  ],
+                  "isPermeable": false
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityXSetAction",
+                          "parameter": 100.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "TouchingFromSideConstraint",
+                          "parameter": "LeftBound"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityXSetAction",
+                          "parameter": -100.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "TouchingFromSideConstraint",
+                          "parameter": "RightBound"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "ChangeGameSceneAction",
+                          "parameter": 2
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "CollidesWithConstraint",
+                          "parameter": "Player"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "DeleteObjectAction",
+                          "parameter": "Devil"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "CollidesWithConstraint",
+                          "parameter": "Bullet"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Platform (prefab) (clone) 7",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 844.260986328125,
+                  "y": -279.3999328613281,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 200.0,
+                  "scaleY": 30.0
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Platform (prefab) (clone)",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 567.2038269042969,
+                  "y": 173.1745147705078,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 200.0,
+                  "scaleY": 30.0
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Platform (prefab) (clone) 2",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 234.44207763671875,
+                  "y": 25.509532928466797,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 200.0,
+                  "scaleY": 30.0
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Top",
+            "Tag": "Top",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": -411.195068359375,
+                  "y": 242.81655883789062,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 2000.0,
+                  "scaleY": 50.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": false
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Platform (prefab) (clone) 6",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 250.28155517578125,
+                  "y": -231.88157653808594,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 200.0,
+                  "scaleY": 30.0
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Platform (prefab) (clone) 4",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 523.5120849609375,
+                  "y": -117.04554748535156,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 200.0,
+                  "scaleY": 30.0
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Player",
+            "Tag": "Player",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 490.0,
+                  "y": 397.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 100.0,
+                  "scaleY": 100.0
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/sprite.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "PhysicsHandler",
+                "Configurations": {
+                  "mass": 1.0,
+                  "velocityX": 0.0,
+                  "velocityY": -600.0,
+                  "accelerationX": 0.0,
+                  "accelerationY": 980.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Ground",
+                    "Platform",
+                    "Top",
+                    "Enemy"
+                  ],
+                  "isPermeable": false
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityYSetAction",
+                          "parameter": -600.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "TouchingFromAboveConstraint",
+                          "parameter": "Ground"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityXSetAction",
+                          "parameter": 100.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "KeyPressConstraint",
+                          "parameter": "RIGHT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityXSetAction",
+                          "parameter": -100.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "KeyPressConstraint",
+                          "parameter": "LEFT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityXSetAction",
+                          "parameter": 0.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "KeyReleaseConstraint",
+                          "parameter": "RIGHT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityXSetAction",
+                          "parameter": 0.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "KeyReleaseConstraint",
+                          "parameter": "LEFT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityYSetAction",
+                          "parameter": -600.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "TouchingFromAboveConstraint",
+                          "parameter": "Platform"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "PushActionY",
+                          "parameter": "Top"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "TouchingFromTopBottomConstraint",
+                          "parameter": "Top"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "ChangeGameSceneAction",
+                          "parameter": 2
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "OutOfViewConstraint",
+                          "parameter": false
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "SpawnObjectAction",
+                          "parameter": "Bullet(prefab)"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "KeyPressConstraint",
+                          "parameter": "UP"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              }
+            ]
+          },
+          {
+            "Name": "LeftBound",
+            "Tag": "LeftBound",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": -513.6149244308472,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 100.0,
+                  "scaleY": 850.6679487228394
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Enemy"
+                  ],
+                  "isPermeable": false
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Ground",
+            "Tag": "Ground",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": 500.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 2560.0,
+                  "scaleY": 20.0
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/Track.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "player",
+                    "Obstacle"
+                  ],
+                  "isPermeable": false
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Camera",
+            "Tag": "Camera",
+            "Components": [
+              {
+                "Name": "Follower",
+                "Configurations": {
+                  "followObjectName": "Top",
+                  "smoothMovement": false
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 1280.0,
+                  "scaleY": 720.0
+                }
+              },
+              {
+                "Name": "Camera",
+                "Configurations": {
+                  "isMainCamera": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "WinScene",
+        "StoreObjects": [],
+        "GameObjects": [
+          {
+            "Name": "PlayAgainText",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 520.0,
+                  "y": 480.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 250.0,
+                  "scaleY": 50.0
+                }
+              },
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "Play again!",
+                  "styleClass": "splashButton",
+                  "isCentered": true,
+                  "fontSize": 30
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "PlayAgainBehavior",
+                      "actions": [
+                        {
+                          "name": "ChangeGameSceneAction",
+                          "parameter": 0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "MouseClickConstraint",
+                          "parameter": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              }
+            ]
+          },
+          {
+            "Name": "WinTextTitle",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 460.0,
+                  "y": 200.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 380.0,
+                  "scaleY": 0.0
+                }
+              },
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "You Won!",
+                  "styleClass": "splashText",
+                  "isCentered": true,
+                  "fontSize": 80
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Camera",
+            "Tag": "Camera",
+            "Components": [
+              {
+                "Name": "Follower",
+                "Configurations": {
+                  "followObjectName": "WinTextTitle",
+                  "smoothMovement": false
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 1300.0,
+                  "scaleY": 1000.0
+                }
+              },
+              {
+                "Name": "Camera",
+                "Configurations": {
+                  "isMainCamera": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "ReturnToMenuText",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 400.0,
+                  "y": 400.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 500.0,
+                  "scaleY": 50.0
+                }
+              },
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "Click to return to main menu",
+                  "styleClass": "splashButton",
+                  "isCentered": true,
+                  "fontSize": 30
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "ClickToMenu",
+                      "actions": [
+                        {
+                          "name": "ChangeGameSceneAction",
+                          "parameter": -2
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "MouseClickConstraint",
+                          "parameter": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "LossScene",
+        "StoreObjects": [],
+        "GameObjects": [
+          {
+            "Name": "LossTextTitle",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 460.0,
+                  "y": 200.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 380.0,
+                  "scaleY": 0.0
+                }
+              },
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "You Lost!",
+                  "styleClass": "splashText",
+                  "isCentered": true,
+                  "fontSize": 80
+                }
+              }
+            ]
+          },
+          {
+            "Name": "TryAgainText",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 520.0,
+                  "y": 480.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 250.0,
+                  "scaleY": 50.0
+                }
+              },
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "Try again",
+                  "styleClass": "splashButton",
+                  "isCentered": true,
+                  "fontSize": 30
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "TryAgainBehavior",
+                      "actions": [
+                        {
+                          "name": "ChangeGameSceneAction",
+                          "parameter": 0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "MouseClickConstraint",
+                          "parameter": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              }
+            ]
+          },
+          {
+            "Name": "Camera",
+            "Tag": "Camera",
+            "Components": [
+              {
+                "Name": "Follower",
+                "Configurations": {
+                  "followObjectName": "LossTextTitle",
+                  "smoothMovement": false
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 1300.0,
+                  "scaleY": 1000.0
+                }
+              },
+              {
+                "Name": "Camera",
+                "Configurations": {
+                  "isMainCamera": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "ReturnToMenuText",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 400.0,
+                  "y": 400.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 500.0,
+                  "scaleY": 50.0
+                }
+              },
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "Click to return to main menu",
+                  "styleClass": "splashButton",
+                  "isCentered": true,
+                  "fontSize": 30
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "ClickToMenu",
+                      "actions": [
+                        {
+                          "name": "ChangeViewSceneAction",
+                          "parameter": "MainMenuScene"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "MouseClickConstraint",
+                          "parameter": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "PrefabScene",
+        "StoreObjects": [],
+        "GameObjects": [
+          {
+            "Name": "Devil(prefab)",
+            "Tag": "Enemy",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 661.331184387207,
+                  "y": -179.17840957641602,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 100.0,
+                  "scaleY": 100.0
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/Devil_2.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "PhysicsHandler",
+                "Configurations": {
+                  "mass": 1.0,
+                  "velocityX": 100.0,
+                  "velocityY": 0.0,
+                  "accelerationX": 0.0,
+                  "accelerationY": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "RightBound",
+                    "LeftBound",
+                    "Player",
+                    "Bullet"
+                  ],
+                  "isPermeable": false
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityXSetAction",
+                          "parameter": 100.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "TouchingFromSideConstraint",
+                          "parameter": "LeftBound"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityXSetAction",
+                          "parameter": -100.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "TouchingFromSideConstraint",
+                          "parameter": "RightBound"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "ChangeGameSceneAction",
+                          "parameter": 2
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "CollidesWithConstraint",
+                          "parameter": "Player"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "DeleteObjectAction",
+                          "parameter": "Devil"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "CollidesWithConstraint",
+                          "parameter": "Bullet"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Bullet(prefab) (clone)(prefab)",
+            "Tag": "Bullet",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": -80.9255599975586,
+                  "y": -226.3632469177246,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 935.5311126708984,
+                  "scaleY": 678.1400527954102
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/bullet.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "PhysicsHandler",
+                "Configurations": {
+                  "mass": 1.0,
+                  "velocityX": 0.0,
+                  "velocityY": -100.0,
+                  "accelerationX": 0.0,
+                  "accelerationY": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Enemy"
+                  ],
+                  "isPermeable": true
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "DeleteObjectAction",
+                          "parameter": "Enemy"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "CollidesWithConstraint",
+                          "parameter": "Enemy"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Platform (prefab)",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 191.0,
+                  "y": 332.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 200.0,
+                  "scaleY": 30.0
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Bullet(prefab)",
+            "Tag": "Bullet",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 289.7815246582031,
+                  "y": -81.36837959289551,
+                  "zIndex": 0,
+                  "rotation": -90.0,
+                  "scaleX": 187.116943359375,
+                  "scaleY": 381.15031814575195
+                }
+              },
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/bullet.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0,
+                  "tiled": false,
+                  "horizontalTiledAmount": 0.0,
+                  "verticalTiledAmount": 0.0
+                }
+              },
+              {
+                "Name": "PhysicsHandler",
+                "Configurations": {
+                  "mass": 1.0,
+                  "velocityX": 0.0,
+                  "velocityY": -100.0,
+                  "accelerationX": 0.0,
+                  "accelerationY": 0.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Enemy"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

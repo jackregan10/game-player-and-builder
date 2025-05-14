@@ -1,0 +1,186 @@
+{
+  "Information": {
+    "Name": "DinoRunner5",
+    "Description": "A playable dino runner game",
+    "Author": "Logan Dracos",
+    "Resolution": {
+      "Width": 1280,
+      "Height": 720
+    }
+  },
+  "Data": {
+    "Scene": [
+      {
+        "Name": "LossScene",
+        "StoreObjects": [],
+        "GameObjects": [
+          {
+            "Name": "LossTextTitle",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "You Lost!",
+                  "styleClass": "splashText",
+                  "isCentered": true,
+                  "fontSize": 80
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 460.0,
+                  "y": 200.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 380.0,
+                  "scaleY": 0.0
+                }
+              }
+            ]
+          },
+          {
+            "Name": "ReturnToMenuText",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "Click to return to main menu",
+                  "styleClass": "splashButton",
+                  "isCentered": true,
+                  "fontSize": 30
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "ClickToMenu",
+                      "actions": [
+                        {
+                          "name": "ChangeViewSceneAction",
+                          "parameter": "MainMenuScene"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "MouseClickConstraint",
+                          "parameter": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 400.0,
+                  "y": 400.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 500.0,
+                  "scaleY": 50.0
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              }
+            ]
+          },
+          {
+            "Name": "Camera",
+            "Tag": "Camera",
+            "Components": [
+              {
+                "Name": "Camera",
+                "Configurations": {
+                  "isMainCamera": true
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 1300.0,
+                  "scaleY": 1000.0
+                }
+              },
+              {
+                "Name": "Follower",
+                "Configurations": {
+                  "followObjectName": "LossTextTitle",
+                  "smoothMovement": false
+                }
+              }
+            ]
+          },
+          {
+            "Name": "TryAgainText",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "Try again",
+                  "styleClass": "splashButton",
+                  "isCentered": true,
+                  "fontSize": 30
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "TryAgainBehavior",
+                      "actions": [
+                        {
+                          "name": "ChangeGameSceneAction",
+                          "parameter": 0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "MouseClickConstraint",
+                          "parameter": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 520.0,
+                  "y": 480.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 250.0,
+                  "scaleY": 50.0
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "PrefabScene",
+        "StoreObjects": [],
+        "GameObjects": []
+      }
+    ]
+  }
+}

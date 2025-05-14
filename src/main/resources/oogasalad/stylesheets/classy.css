@@ -1,0 +1,16 @@
+.root {
+  /* Font Family */
+  -fx-font-family: serif;
+  /* Colors - Classy Mode */
+  -fx-base-background-color: #FFFFFF;           /* Dark background */
+  -fx-base-text-color: #1A1A1A;                 /* Light text for readability */
+  -fx-base-accent-color: #FFD700;               /* Gray accent */
+  -fx-base-offwhite-color: #F8F8FF;             /* Slightly lighter dark for contrast */
+  /* Shadows - Dark Mode (Slightly adjusted for dark backgrounds) */
+  -fx-shadow-color-light: rgba(255, 215, 0, 0.1);    /* Lighter shadow for dark bg */
+  -fx-shadow-color-medium: rgba(255, 215, 0, 0.3);    /* Increased shadow for depth */
+  -fx-shadow-color-strong: rgba(255, 215, 0, 0.4);   /* Stronger shadow */
+  -fx-accent-color-transparent: rgba(255, 215, 0, 0.3); /* Darker gray overlay */
+  /* Special properties */
+  -fx-base-rotate: 0;
+}

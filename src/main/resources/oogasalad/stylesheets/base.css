@@ -1,0 +1,691 @@
+/* UNIVERSAL STYLE */
+.root {
+  -fx-background-color: -fx-base-background-color;
+  -fx-font-family: -fx-font-family;
+  -fx-text-fill: -fx-base-text-color;
+  -fx-spacing: 20px;
+}
+
+.button {
+  -fx-text-fill: -fx-base-text-color;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-background-color: -fx-base-background-color;
+  -fx-padding: 5px 7px;
+  -fx-font-size: 18px;
+  -fx-border-radius: 5px;
+  -fx-background-radius: 5px;
+  -fx-border-width: 2px;
+  -fx-spacing: 20px;
+  -fx-cursor: hand; /* Or -fx-cursor: pointer; */
+  -fx-effect: dropshadow(gaussian, -fx-shadow-color-medium, 5, 0, 2, 2); /* Default subtle shadow */
+  -fx-transition: -fx-effect 0.1s ease-in-out, -fx-translate-y 0.1s ease-in-out;
+}
+
+.button.small {
+  -fx-font-size: 16px;
+}
+
+.button:armed {
+  /* Shadow for the pressed state (smaller and closer) */
+  -fx-effect: dropshadow(gaussian, -fx-shadow-color-strong, 3, 0, 1, 1);
+  /* Optional: Translate the button slightly down */
+  -fx-translate-y: 2px;
+}
+
+.label {
+  -fx-text-fill: -fx-base-text-color;
+  -fx-background-color: transparent;
+}
+
+.combo-box {
+  -fx-background-color: -fx-base-background-color;
+  -fx-text-fill: -fx-base-text-color;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-fill-color: -fx-base-background-color;
+}
+
+.combo-box > *.list-cell {
+  -fx-text-fill: -fx-base-text-color;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:hover {
+  -fx-background-color: -fx-base-accent-color;
+  -fx-text-fill: -fx-base-text-color;
+}
+
+.combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+  -fx-background-color: -fx-base-accent-color;
+  -fx-text-fill: -fx-base-text-color;
+}
+
+/* MAIN MENU STYLE */
+#mainMenuTitle {
+  -fx-font-size: 160px;
+  -fx-text-fill: -fx-base-accent-color;
+  -fx-rotate: -fx-base-rotate-main-menu;
+}
+
+#buttonBox {
+  -fx-alignment: center;
+  -fx-spacing: 40px;
+  -fx-padding: 10px;
+}
+
+#playButton, #buildButton, #socialHubButton {
+  -fx-rotate: -fx-base-rotate;
+}
+
+#selectorBox {
+  -fx-alignment: center;
+  -fx-spacing: 20px;
+  -fx-padding: 10px;
+}
+
+#gameSelector {
+  -fx-padding: 8px 16px;
+  -fx-font-size: 18px;
+  -fx-border-radius: 8px;
+  -fx-background-radius: 8px;
+  -fx-border-width: 2px;
+}
+
+#menuSelector {
+  -fx-padding: 5px 10px;
+  -fx-font-size: 14px;
+  -fx-border-radius: 5px;
+  -fx-background-radius: 5px;
+  -fx-border-width: 1px;
+}
+
+/* GAME PLAYER STYLES */
+#gameCanvas {
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-width: 2px;
+  -fx-margin: 20px;
+}
+/* Social Hub Main Scene */
+.nameTextBox {
+  -fx-background-color: -fx-base-background-color;
+  -fx-padding: 10;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-radius: 5;
+  -fx-max-width: 350px;
+}
+
+#socialCard {
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-width: 2px;
+  -fx-border-radius: 10px;
+  -fx-background-color: -fx-base-background-color ;
+  -fx-background-radius: 10px;
+  -fx-max-height: 600px;
+  -fx-max-width: 500px;
+  -fx-alignment: center;
+  -fx-effect: -fx-shadow-color-strong;
+}
+
+#socialWelcomeMessage {
+  -fx-font-size: 24px;
+  -fx-text-fill: -fx-base-text-color;
+}
+
+#socialEmailPrompt {
+  -fx-background-color: -fx-base-background-color;
+  -fx-padding: 10;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-radius: 5;
+  -fx-max-width: 350px;
+  -fx-text-fill: -fx-base-text-color;
+}
+
+#socialPasswordPrompt {
+  -fx-background-color: -fx-base-background-color;
+  -fx-padding: 10;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-radius: 5;
+  -fx-max-width: 350px;
+  -fx-text-fill: -fx-base-text-color;
+}
+
+#togglePasswordButton {
+  -fx-font-size: 12;
+  -fx-text-fill: -fx-base-text-color;
+}
+
+#signUpLabel {
+  -fx-font-size: 24px;
+  -fx-text-fill: -fx-base-text-color;
+}
+
+#rememberMeCheckbox {
+  -fx-font-size: 12;
+  -fx-text-fill: -fx-base-text-color;
+}
+
+/* SPLASH SCREENS */
+.splashText {
+  -fx-font-size: 36px;
+  -fx-text-fill: #333333; /* Replace -fx-base-text-color */
+}
+
+.splashText-container {
+  -fx-padding: 12 24;
+  -fx-background-color: #ffffff; /* Replace -fx-base-background-color */
+  -fx-border-color: #4285f4; /* Replace -fx-base-accent-color */
+  -fx-border-width: 2px;
+  -fx-background-radius: 10px;
+  -fx-border-radius: 10px;
+}
+
+.splashButton {
+  -fx-font-size: 28px;
+  -fx-text-fill: #4285f4; /* Replace -fx-base-accent-color */
+}
+
+.splashButton-container {
+  -fx-padding: 10 20;
+  -fx-background-color: #ffffff; /* Replace -fx-base-background-color */
+  -fx-border-color: #4285f4; /* Replace -fx-base-accent-color */
+  -fx-border-width: 2px;
+  -fx-background-radius: 8px;
+  -fx-border-radius: 8px;
+}
+
+/* PAUSE MODAL */
+#pause-overlay {
+  -fx-font-size: 48px;
+  -fx-text-fill: white;
+  -fx-background-color: rgba(0, 0, 0, 0.5);
+  -fx-padding: 20px;
+  -fx-alignment: center;
+  -fx-text-alignment: center;
+  -fx-border-radius: 10px;
+  -fx-background-radius: 10px;
+}
+
+/* PROFILE SCENE */
+#profileInfo {
+  -fx-spacing: 10px;
+}
+
+#profileCard,
+#levelContainer,
+#singleLevel
+{
+  -fx-background-color: -fx-base-offwhite-color;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-width: 2;
+  -fx-border-radius: 5%;
+  -fx-background-radius: 5%;
+  -fx-padding: 10px;
+  -fx-pref-width: 500px;
+}
+
+#levelCard
+{
+  -fx-background-color: -fx-base-offwhite-color;
+  -fx-border-color: transparent;
+  -fx-border-width: 0;
+  -fx-border-radius: 0;
+  -fx-background-radius: 0;
+}
+
+#levelPane {
+  -fx-background-color: -fx-base-offwhite-color;
+  -fx-background-insets: 0;
+  -fx-padding: 0;
+  -fx-border-color: transparent;
+}
+
+#utilityButtons {
+  -fx-spacing: 5px;
+}
+
+#profileImage {
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-width: 2px;
+}
+
+#fullName,
+#levelTitle,
+#title
+{
+  -fx-font-size: 20px;
+  -fx-font-weight: bold;
+  -fx-padding: 5px 0;
+}
+
+#username {
+  -fx-font-size: 16px;
+  -fx-padding: 1px;
+}
+
+#dateCreated {
+  -fx-font-size: 12px;
+}
+/* PROFILE EDIT SCENE */
+#editProfileSubmitButton {
+  -fx-font-size: 16px;
+  -fx-border-radius: 5px;
+  -fx-min-width: 150px;
+  -fx-alignment: center;
+  -fx-margin-top: 20px;
+}
+
+#editProfileUsernameLabel,
+#editProfileBioLabel,
+#editProfileNameLabel,
+#editProfilePhotoLabel {
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-min-width: 100px; /* Adjust as needed */
+  -fx-alignment: center-left;
+}
+
+#editProfileUsernameTextField,
+#editProfileNameTextField {
+  /* Style for text fields */
+  -fx-padding: 8px;
+  -fx-font-size: 14px;
+  -fx-border-radius: 5px;
+  -fx-pref-width: 250px; /* Adjust as needed */
+}
+
+#editProfileBioTextArea {
+  /* Style for the bio text area */
+  -fx-padding: 8px;
+  -fx-font-size: 14px;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-radius: 5px;
+  -fx-pref-width: 250px; /* Adjust as needed */
+  -fx-pref-height: 100px; /* Adjust as needed */
+  -fx-text-fill: -fx-base-text-color;
+}
+
+#editProfileUploadPhotoButton {
+  -fx-padding: 8px 15px;
+  -fx-font-size: 14px;
+  -fx-border-radius: 5px;
+  -fx-cursor: hand;
+}
+
+#editProfileSelectedFileLabel {
+  -fx-font-size: 12px;
+  -fx-padding-left: 10px;
+}
+
+#uploadPhotoButton {
+  -fx-font-size: 12px;
+}
+/* User List View */
+#listView {
+  -fx-background-color: -fx-base-offwhite-color;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-width: 2;
+  -fx-border-radius: 5%;
+  -fx-background-radius: 5%;
+  -fx-padding: 10px;
+}
+
+#listView .list-cell {
+  -fx-background-color: -fx-base-offwhite-color;
+}
+
+#userRow {
+  -fx-background-color: -fx-base-background-color;
+  -fx-padding: 8;
+  -fx-spacing: 10;
+  -fx-border-radius: 5%;
+  -fx-background-radius: 20;
+  -fx-alignment: center-left;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-width: 1 1 1 1;
+}
+
+#userRow:hover {
+  -fx-background-color: -fx-shadow-color-medium;
+  -fx-background-radius: 20;
+}
+
+#userRow:selected {
+  -fx-background-color: -fx-shadow-color-light;
+  -fx-text-fill: -fx-base-text-color;
+  -fx-border-radius: 5%;
+  -fx-background-radius: 5%;
+}
+
+#searchBar {
+  -fx-prompt-text-fill: -fx-base-text-color;
+  -fx-padding: 8;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-radius: 5;
+}
+
+#searchBar:focused {
+  -fx-background-color: -fx-base-accent-color;
+}
+/* SOCIAL HUB WELCOME SCREEN */
+#socialHubTitle {
+  -fx-text-color: -fx-base-text-color;
+  -fx-font-size: 100px;
+  -fx-rotate: -fx-base-rotate;
+}
+
+#socialHubSubtitle {
+  -fx-text-color: -fx-base-text-color;
+  -fx-font-size: 50px;
+}
+#socialHubProfileImage {
+  -fx-spacing: 10px;
+}
+
+/* tabview.css */
+
+/* 1) Give the TabPane itself a white background, border, and fully rounded corners */
+.tab-pane {
+  -fx-background-color: white;
+  -fx-background-radius: 8;       /* full rounding on all 4 corners */
+  -fx-border-color: #8f8f8f;
+  -fx-border-width: 1;
+  -fx-border-radius: 8;
+}
+
+.tab-pane .tab {
+  -fx-background-color: white;
+  -fx-background-insets: 0,1;
+  -fx-background-radius: 6 6 0 0;
+  -fx-border-color: #8f8f8f;
+  -fx-border-width: 1;
+  -fx-border-radius: 6 6 0 0;
+  -fx-padding: 10 20;
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #333333;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0, 0, 2);
+}
+
+.tab-pane > .tab-header-background {
+  -fx-background-color: transparent;
+  -fx-background-radius: 8 8 8 8;  /* only top-left, top-right rounded */
+}
+
+.tab-pane .tab:hover {
+  -fx-background-color: rgba(0,0,0,0.05);
+}
+
+.tab-pane .tab:selected {
+  -fx-background-color: white;
+  -fx-effect: none;
+  -fx-border-color: #6f6f6f;
+  -fx-border-width: 1 1 2 1;
+}
+
+/* ==========================
+   Docking
+   ========================== */
+.docker {
+  -fx-background-color: -fx-base-background-color;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-width: 1;
+  -fx-border-radius: 6;
+  -fx-padding: 10;
+}
+
+.dock-window {
+  -fx-background-color: -fx-base-background-color;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-width: 1;
+  -fx-border-radius: 6;
+}
+
+.dock-tab-pane {
+  -fx-background-radius: 0;
+  -fx-border-radius: 0;
+}
+
+.dock-tab-pane > .tab-header-area > .tab-header-background {
+  -fx-background-color: -fx-base-background-color;
+}
+
+.dock-tab-pane .tab {
+  -fx-background-color: -fx-base-background-color;
+  -fx-background-radius: 6;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-radius: 6;
+  -fx-padding: 0;
+}
+
+.dock-tab-label {
+  -fx-background-color: -fx-base-background-color;
+  -fx-background-radius: 6;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-radius: 6;
+  -fx-text-fill: -fx-base-text-color;
+  -fx-padding: 4px;
+}
+
+.dock-tab-label:hover {
+  -fx-background-color: rgba(160, 196, 255, 1);
+}
+
+.dock-indicator {
+  -fx-background-color: -fx-base-accent-color;
+  -fx-border-color: #1e1e1e;
+  -fx-border-width: 2;
+}
+
+.dock-indicator .label {
+  -fx-font-size: 25px;
+  -fx-font-weight: bold;
+  -fx-text-fill: -fx-base-text-color;
+}
+
+.dock-indicator:hover {
+  -fx-background-color: rgba(160, 196, 255, 1);
+  -fx-text-fill: #222222;
+}
+
+.dock-split-pane {
+  -fx-background-color: -fx-base-background-color;
+}
+
+.dock-split-pane .split-pane-divider {
+  -fx-background-color: fx-base-accent-color;
+}
+
+.dock-split-pane .split-pane-divider:hover {
+  -fx-background-color: rgba(160, 196, 255, 1);
+}
+
+/* ==========================
+   Object Panel
+   ========================== */
+
+ObjectPanel {
+  -fx-background-color: -fx-base-background-color;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-width: 1;
+}
+
+ObjectPanel > VBox {
+  -fx-spacing: 3 !important;
+}
+
+ObjectPanel > .button {
+  -fx-font-size: 14 !important;
+}
+
+ObjectPanel > VBox > HBox {
+  -fx-padding: 0 10 0 0 !important;
+  -fx-min-height: 30;
+}
+
+ObjectPanel > VBox > HBox > .label{
+  -fx-background-color: rgba(133, 101, 197, 0.2) !important;
+  -fx-text-fill: #231930 !important;
+  -fx-pref-height: 30;
+  -fx-background-radius: 6;
+}
+
+ObjectPanel > VBox > HBox > .button {
+  -fx-text-fill: #231930 !important;
+  -fx-font-size: 12 !important;
+  -fx-font-weight: bold !important;
+  -fx-padding: 0 5 0 5;
+  -fx-border-width: 0;
+}
+
+/* ==========================
+   Prefab Panel
+   ========================== */
+PrefabPanel ScrollPane {
+  -fx-background-color: -fx-base-background-color;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-width: 1;
+}
+PrefabPanel TilePane {
+  -fx-background-color: -fx-base-background-color;
+}
+
+/* ==========================
+   Component Panel
+   ========================== */
+
+ComponentPanel {
+  -fx-background-color: -fx-base-background-color !important;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-width: 1;
+  -fx-spacing: 3 !important;
+}
+
+ComponentPanel > VBox {
+  -fx-padding: 4;
+  -fx-background-radius: 6;
+  -fx-pref-height: 30;
+}
+
+ComponentPanel > VBox > HBox {
+  -fx-padding: 0 !important;
+}
+
+ComponentPanel > VBox > HBox > .label {
+  -fx-text-fill: #231930 !important;
+  -fx-min-height: 22; /* 30 - 4 - 4 */
+}
+
+ComponentPanel > VBox > HBox > .button {
+  -fx-text-fill: #231930 !important;
+  -fx-font-size: 12 !important;
+  -fx-font-weight: bold !important;
+  -fx-padding: 0 5 0 5;
+  -fx-border-width: 0;
+}
+
+ComponentPanel VBox VBox {
+  -fx-spacing: 0 !important;
+}
+
+ComponentPanel VBox VBox .button {
+  -fx-font-size: 12 !important;
+  -fx-font-weight: bold !important;
+  -fx-padding: 0 5 0 5;
+}
+
+ComponentPanel VBox .label {
+  -fx-text-fill: #231930 !important;
+}
+
+ComponentPanel VBox EditableLabel {
+  -fx-padding: 0 !important;
+}
+
+ComponentPanel VBox .combo-box {
+  -fx-pref-width: 200;
+  -fx-background-color: #9e8f7b;
+  -fx-text-fill: #231930;
+  -fx-border-color: #231930;
+  -fx-font-weight: bold;
+}
+
+ComponentPanel VBox .combo-box > *.list-cell {
+  -fx-text-fill: #231930;
+  -fx-font-weight: bold;
+}
+
+ComponentPanel VBox .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:hover {
+  -fx-background-color: #231930;
+  -fx-font-weight: bold;
+}
+
+ComponentPanel VBox .combo-box-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+  -fx-background-color: #231930;
+  -fx-font-weight: bold;
+}
+
+ComponentPanel .menu-button {
+  -fx-background-color: -fx-base-background-color;
+  -fx-text-fill: -fx-base-text-color;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-font-weight: bold;
+}
+
+ComponentPanel .menu-button .menu > .menu-item {
+  -fx-text-fill: #231930;
+  -fx-font-weight: bold;
+}
+
+ComponentPanel .menu-button .menu > .menu-item:hover {
+  -fx-background-color: -fx-base-background-color;
+  -fx-text-fill: #231930;
+  -fx-font-weight: bold;
+}
+
+ComponentPanel .menu-button .menu > .menu-item:filled:selected {
+  -fx-background-color: -fx-base-accent-color;
+  -fx-text-fill: -fx-base-text-color;
+  -fx-font-weight: bold;
+}
+
+/* ==========================
+   Scene Panel
+   ========================== */
+
+ScenePanel {
+  -fx-background-color: -fx-base-background-color;
+  -fx-border-color: -fx-base-accent-color;
+  -fx-border-width: 1;
+}
+
+ScenePanel > VBox {
+  -fx-spacing: 3 !important;
+}
+
+ScenePanel > VBox > HBox {
+  -fx-padding: 0 !important;
+  -fx-min-height: 30;
+}
+
+ScenePanel > VBox > HBox > HBox {
+  -fx-padding: 0 10 0 10 !important;
+}
+
+ScenePanel > VBox > HBox > HBox > .button {
+  -fx-text-fill: #231930 !important;
+  -fx-font-size: 12 !important;
+  -fx-font-weight: bold !important;
+  -fx-padding: 0 5 0 5;
+  -fx-border-width: 0;
+}
+
+ScenePanel > VBox > HBox > .label {
+  -fx-text-fill: #231930 !important;
+  -fx-font-weight: normal !important;
+}
+
+ScenePanel > VBox > VBox > .button {
+  -fx-font-size: 14 !important;
+}
+
+
+
+

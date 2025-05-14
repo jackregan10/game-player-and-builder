@@ -1,0 +1,763 @@
+{
+  "Information": {
+    "Name": "DinoRunner1",
+    "Description": "A playable dino runner game",
+    "Author": "Christian Bepler",
+    "Resolution": {
+      "Width": 1280,
+      "Height": 720
+    }
+  },
+  "Data": {
+    "Scene": [
+      {
+        "Name": "MainGame",
+        "StoreObjects": [],
+        "GameObjects": [
+          {
+            "Name": "Platform (prefab) (clone)",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 452.3678283691406,
+                  "y": 185.05409240722656,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 200.0,
+                  "scaleY": 30.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Platform (prefab) (clone) 0",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 261.802490234375,
+                  "y": 340.6589050292969,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 200.0,
+                  "scaleY": 30.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Player",
+            "Tag": "Player",
+            "Components": [
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/sprite.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 490.0,
+                  "y": 397.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 100.0,
+                  "scaleY": 100.0
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityYSetAction",
+                          "parameter": -600.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "TouchingFromAboveConstraint",
+                          "parameter": "Ground"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityXSetAction",
+                          "parameter": 100.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "KeyPressConstraint",
+                          "parameter": "RIGHT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityXSetAction",
+                          "parameter": -100.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "KeyPressConstraint",
+                          "parameter": "LEFT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityXSetAction",
+                          "parameter": 0.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "KeyReleaseConstraint",
+                          "parameter": "RIGHT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityXSetAction",
+                          "parameter": 0.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "KeyReleaseConstraint",
+                          "parameter": "LEFT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "VelocityYSetAction",
+                          "parameter": -600.0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "TouchingFromAboveConstraint",
+                          "parameter": "Platform"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "PushActionY",
+                          "parameter": "Top"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "TouchingFromTopBottomConstraint",
+                          "parameter": "Top"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "New Behavior",
+                      "actions": [
+                        {
+                          "name": "ChangeGameSceneAction",
+                          "parameter": 2
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "OutOfViewConstraint",
+                          "parameter": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Ground",
+                    "Platform",
+                    "Top"
+                  ],
+                  "isPermeable": false
+                }
+              },
+              {
+                "Name": "PhysicsHandler",
+                "Configurations": {
+                  "mass": 1.0,
+                  "velocityX": 0.0,
+                  "velocityY": -600.0,
+                  "accelerationX": 0.0,
+                  "accelerationY": 980.0
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              }
+            ]
+          },
+          {
+            "Name": "Camera",
+            "Tag": "Camera",
+            "Components": [
+              {
+                "Name": "Follower",
+                "Configurations": {
+                  "followObjectName": "Top",
+                  "smoothMovement": false
+                }
+              },
+              {
+                "Name": "Camera",
+                "Configurations": {
+                  "isMainCamera": true
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 1280.0,
+                  "scaleY": 720.0
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Ground",
+            "Tag": "Ground",
+            "Components": [
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/Track.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": 500.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 2560.0,
+                  "scaleY": 20.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "player",
+                    "Obstacle"
+                  ],
+                  "isPermeable": false
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Top",
+            "Tag": "Top",
+            "Components": [
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": -149.0,
+                  "y": 344.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 2000.0,
+                  "scaleY": 20.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": false
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Platform (prefab) (clone) 1",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 637.7747497558594,
+                  "y": 349.4732971191406,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 253.57867431640625,
+                  "scaleY": 41.162261962890625
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "WinScene",
+        "StoreObjects": [],
+        "GameObjects": [
+          {
+            "Name": "WinTextTitle",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "You Won!",
+                  "styleClass": "splashText",
+                  "isCentered": true,
+                  "fontSize": 80
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 460.0,
+                  "y": 200.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 380.0,
+                  "scaleY": 0.0
+                }
+              }
+            ]
+          },
+          {
+            "Name": "Camera",
+            "Tag": "Camera",
+            "Components": [
+              {
+                "Name": "Follower",
+                "Configurations": {
+                  "followObjectName": "WinTextTitle",
+                  "smoothMovement": false
+                }
+              },
+              {
+                "Name": "Camera",
+                "Configurations": {
+                  "isMainCamera": true
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 1300.0,
+                  "scaleY": 1000.0
+                }
+              }
+            ]
+          },
+          {
+            "Name": "PlayAgainText",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "Play again!",
+                  "styleClass": "splashButton",
+                  "isCentered": true,
+                  "fontSize": 30
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 520.0,
+                  "y": 480.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 250.0,
+                  "scaleY": 50.0
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "PlayAgainBehavior",
+                      "actions": [
+                        {
+                          "name": "ChangeGameSceneAction",
+                          "parameter": 0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "MouseClickConstraint",
+                          "parameter": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              }
+            ]
+          },
+          {
+            "Name": "ReturnToMenuText",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "Click to return to main menu",
+                  "styleClass": "splashButton",
+                  "isCentered": true,
+                  "fontSize": 30
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 400.0,
+                  "y": 400.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 500.0,
+                  "scaleY": 50.0
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "ClickToMenu",
+                      "actions": [
+                        {
+                          "name": "ChangeGameSceneAction",
+                          "parameter": -2
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "MouseClickConstraint",
+                          "parameter": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "LossScene",
+        "StoreObjects": [],
+        "GameObjects": [
+          {
+            "Name": "Camera",
+            "Tag": "Camera",
+            "Components": [
+              {
+                "Name": "Follower",
+                "Configurations": {
+                  "followObjectName": "LossTextTitle",
+                  "smoothMovement": false
+                }
+              },
+              {
+                "Name": "Camera",
+                "Configurations": {
+                  "isMainCamera": true
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 1300.0,
+                  "scaleY": 1000.0
+                }
+              }
+            ]
+          },
+          {
+            "Name": "TryAgainText",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "Try again",
+                  "styleClass": "splashButton",
+                  "isCentered": true,
+                  "fontSize": 30
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 520.0,
+                  "y": 480.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 250.0,
+                  "scaleY": 50.0
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "TryAgainBehavior",
+                      "actions": [
+                        {
+                          "name": "ChangeGameSceneAction",
+                          "parameter": 0
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "MouseClickConstraint",
+                          "parameter": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              }
+            ]
+          },
+          {
+            "Name": "ReturnToMenuText",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "Click to return to main menu",
+                  "styleClass": "splashButton",
+                  "isCentered": true,
+                  "fontSize": 30
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 400.0,
+                  "y": 400.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 500.0,
+                  "scaleY": 50.0
+                }
+              },
+              {
+                "Name": "BehaviorController",
+                "Configurations": {
+                  "behaviors": [
+                    {
+                      "name": "ClickToMenu",
+                      "actions": [
+                        {
+                          "name": "ChangeViewSceneAction",
+                          "parameter": "MainMenuScene"
+                        }
+                      ],
+                      "constraints": [
+                        {
+                          "name": "MouseClickConstraint",
+                          "parameter": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "Name": "InputHandler",
+                "Configurations": {}
+              }
+            ]
+          },
+          {
+            "Name": "LossTextTitle",
+            "Tag": "UI",
+            "Components": [
+              {
+                "Name": "TextRenderer",
+                "Configurations": {
+                  "text": "You Lost!",
+                  "styleClass": "splashText",
+                  "isCentered": true,
+                  "fontSize": 80
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 460.0,
+                  "y": 200.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 380.0,
+                  "scaleY": 0.0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "PrefabScene",
+        "StoreObjects": [],
+        "GameObjects": [
+          {
+            "Name": "Platform (prefab)",
+            "Tag": "Platform",
+            "Components": [
+              {
+                "Name": "SpriteRenderer",
+                "Configurations": {
+                  "imagePath": "resources/platform.png",
+                  "offsetX": 0.0,
+                  "offsetY": 0.0
+                }
+              },
+              {
+                "Name": "Transform",
+                "Configurations": {
+                  "x": 191.0,
+                  "y": 332.0,
+                  "zIndex": 0,
+                  "rotation": 0.0,
+                  "scaleX": 200.0,
+                  "scaleY": 30.0
+                }
+              },
+              {
+                "Name": "Collider",
+                "Configurations": {
+                  "collidableTags": [
+                    "Player"
+                  ],
+                  "isPermeable": true
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

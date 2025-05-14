@@ -1,0 +1,17 @@
+.root {
+  /* Font Family */
+  -fx-font-family: "Impact", sans-serif;
+  /* Colors - Freaky Mode */
+  -fx-base-background-color: #220000;           /* Dark background */
+  -fx-base-text-color: #990000;                 /* Light text for readability */
+  -fx-base-accent-color: #660000;               /* Gray accent */
+  -fx-base-offwhite-color: #220000;             /* Slightly lighter dark for contrast */
+  /* Shadows - Dark Mode (Slightly adjusted for dark backgrounds) */
+  -fx-shadow-color-light: rgba(68, 1, 1, 0.1);    /* Lighter shadow for dark bg */
+  -fx-shadow-color-medium: rgba(68, 1, 1, 0.3);    /* Increased shadow for depth */
+  -fx-shadow-color-strong: rgba(68, 1, 1, 0.4);   /* Stronger shadow */
+  -fx-accent-color-transparent: rgba(102, 0, 0, 0.3); /* Darker gray overlay */
+  /* Special properties */
+  -fx-base-rotate: 5;
+  -fx-base-rotate-main-menu: 180;
+}

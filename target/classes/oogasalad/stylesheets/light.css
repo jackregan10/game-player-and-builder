@@ -1,0 +1,16 @@
+.root {
+  /* Font Family - Removed from here, should be in main CSS */
+  -fx-font-family: "Helvetica", sans-serif;
+  /* Colors - Light Mode */
+  -fx-base-background-color: #F8F9FA;  /* Light background */
+  -fx-base-text-color: #212529;        /* Dark text */
+  -fx-base-accent-color: #808080;      /* Gray accent */
+  -fx-base-offwhite-color: #DEE2E6;    /* Slightly lighter background */
+  /* Shadows - Light Mode */
+  -fx-shadow-color-light: rgba(0, 0, 0, 0.1);
+  -fx-shadow-color-medium: rgba(0, 0, 0, 0.2);
+  -fx-shadow-color-strong: rgba(0, 0, 0, 0.3);
+  -fx-accent-color-transparent: rgba(128, 128, 128, 0.3);
+  /* Special properties */
+  -fx-base-rotate: 0; /* added rotate */
+}
